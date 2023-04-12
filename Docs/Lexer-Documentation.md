@@ -22,7 +22,7 @@
 
 ## Technical specification ##
 
-### Context ###
+### <a name="context"></a>Context ###
 
 In computer science, lexical analysis, lexing or tokenization is the process of converting a
 sequence of characters (such as in a computer program or web page) into a sequence of lexical tokens (strings with an
@@ -35,7 +35,7 @@ Parser. the input string is the actual source code of the Ecla file that we want
 
 for the tokenization of the Ecla lexer, we need to declare our token, and identifier.
 
-* #### Token ####
+* #### <a name="token"></a>Token ####
 
 ```go
 type Token struct {
@@ -52,7 +52,7 @@ type Token struct {
     - Position contain the position in the line were our token begin.
     - Line contain the line number of our token
 
-* #### Identifier ####
+* #### <a name="identifier"></a>Identifier ####
 
 an identifier is here to link a token type with his known syntax. You can find the known syntax of each token in the
 Table of token.
@@ -78,7 +78,7 @@ var Identifier []identifier = []identifier{
 
 ### Lexer process ###
 
-* #### Composite and Involved token ####
+* #### <a name="composite-and-involved-token"></a>Composite and Involved token ####
 
 We have defined 2 attributes for each token. they may be **_Composite_** and/or **_Involved_**.
 
@@ -100,7 +100,7 @@ we are using those 2 attributes because its easier to understand the behavior of
 Sometimes, a token can be Composite and Situational, like the INT token. in this case, the token have a specific
 identifier to initiate the behavior of instantiation and compose with itself for a limited duration.
 
-* #### both direction lexing ####
+* #### <a name="both-direction-lexing"></a>both direction lexing ####
 
 Our lexer work with a 1 character increment each iteration on the input string. we compare all the substring that we
 didn't assign to a token with all the know syntax. but with this simple behavior, a basic situation can occur and brake
@@ -121,7 +121,7 @@ if we use this input string for references, and do the Lexer work step by step, 
 For this last step, we see the mistake: even if a known syntax occur later in the substring , nothing happen, that's why
 for each iteration, we check if our substring backward is a known syntax to avoid this mistake.
 
-* #### Behavior ####
+* #### <a name="behavior"></a>Behavior ####
 
 Like said in the last section, Our lexer work with a 1 character increment each iteration on the input string.
 
@@ -153,17 +153,17 @@ the `\n` character to know the line, and position.
 
 ### Performance ###
 
-* #### Time complexity ####
+* #### <a name="time-complexity"></a>Time complexity ####
 
-* #### Space complexity ####
+* #### <a name="space-complexity"></a>Space complexity ####
 
-* #### Memory usage ####
+* #### <a name="memory-usage"></a>Memory usage ####
 
-* #### Performance tests ####
+* #### <a name="performance"></a>Performance tests ####
 
 ## Grammar ##
 
-### Table of Token ###
+### <a name="table-of-token"></a>Table of Token ###
 
 | token name     | Context                                                                                                                                                                                        | identifier                              | Composite                                    | Involved                 |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|----------------------------------------------|--------------------------|
