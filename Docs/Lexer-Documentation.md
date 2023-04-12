@@ -3,22 +3,22 @@
 ## Table of content ##
 
 - Technical specifications
-    - context
+    - [context](#context)
     - Inner structure
-        - Token
-        - identifier
+        - [Token](#token)
+        - [identifier](#identifier)
 - Inner workings
     - Lexer process
-        - composite and situation token
-        - both direction lexing
-        - behavior
+        - [composite and situation token](#composite-and-involved-token)
+        - [both direction lexing](#both-direction-lexing)
+        - [behavior](#behavior)
     - Performance
-        - Time complexity
-        - Space complexity
-        - Memory usage
-        - Performance tests
+        - [Time complexity](#time-complexity)
+        - [Space complexity](#space-complexity)
+        - [Memory usage](#memory-usage)
+        - [Performance tests](#performance)
 - Grammar
-    - Table of token
+    - [Table of token](#table-of-token)
 
 ## Technical specification ##
 
