@@ -11,14 +11,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
-      actions: read
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          repository: 'https://github.com/Eclalang/Docs/'
       - uses: actions/setup-python@v4
         with: 
             python-version: '3.10'
