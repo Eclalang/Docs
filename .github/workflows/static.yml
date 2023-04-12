@@ -16,8 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          repository: 'Eclalang/Docs'
       - uses: actions/setup-python@v4
         with: 
             python-version: '3.10'
